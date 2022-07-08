@@ -1,17 +1,19 @@
 <template>
   <div class="about">
-    <h1>Strona o nas</h1>
-    <Cards></Cards>
+    <Pracownicy></Pracownicy>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import Cards from '@/components/Cards.vue'
+import Pracownicy from '@/components/Pracownicy.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'AboutView',
   components: {
-    Cards,
+    Pracownicy,
+    Footer
 }
 }
 </script>

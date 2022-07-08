@@ -1,25 +1,19 @@
 <template>
-  <div class="oferta">
-    <Cards></Cards>
+  <div class="about">
+    <Oferta></Oferta>
     <Footer></Footer>
   </div>
 </template>
 
 <script>
-import Cards from '@/components/Cards.vue'
+import Oferta from '@/components/Oferta.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'OfertaView',
   components: {
-    Cards,
+    Oferta,
     Footer
 }
 }
 </script>
-
-<style scoped>
-.container {
-  padding-top: 30px;
-}
-</style>

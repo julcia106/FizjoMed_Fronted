@@ -1,23 +1,32 @@
 <template>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="bg-secondary text-white my-5 py-4 card">
-        <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Donec sit amet nulla convallis, pretium purus non, vehicula metus.
-        </div>
-      </div>
-    </div>
+
+  <div class="container">
+    <b-table sticky-header :items="items" head-variant="light"></b-table>
   </div>
-</div>
 </template>
 
 <script>
 export default {
   name: 'CTA',
+  data() {
+      return {
+        items: [
+          { Usługa: 'Wizyta u fizjoterapeuty', Cena: '180 zł' },
+          { Usługa: 'Wizyta u osteopaty', Cena: '230 – 320 zł' },
+          { Usługa: 'Trening personalny', Cena: '140 zł' },
+          { Usługa: 'Taping medyczny', Cena: '50 zł' },
+          { Usługa: 'Konsultacja ortopedyczna', Cena: '250 zł' },
+          { Usługa: 'Konsultacja ortopedyczna + USG/USG (podwójne)', Cena: '300 zł/280 zł' },
+          { Usługa: 'Neurologopeda wizyta (diagnostyczna)', Cena: '210 – 230 zł' },
+          { Usługa: 'USG tarczycy, jamy brzusznej, ortopedyczne', Cena: '150 zł' },
+        ]
+      }
+  }
 }
 </script>
 
 <style scoped>
+.container {
+  display: inline-block;
+}
 </style>

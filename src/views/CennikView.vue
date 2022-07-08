@@ -16,3 +16,9 @@ export default {
 }
 </script>
 
+<style scoped>
+.cennik {
+  padding-top: 20px;
+}
+</style>
+
