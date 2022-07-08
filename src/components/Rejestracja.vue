@@ -134,7 +134,7 @@ export default {
       axios.get('http://localhost:5868/api/' + "treatment")
         .then((response) => {
           this.treatments = response.data;
-          this.departmentsWithoutFilter = response.data;
+          this.treatmentWithoutFilter = response.data;
         });
     },
     addClick() {

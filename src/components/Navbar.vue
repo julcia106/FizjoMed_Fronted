@@ -12,6 +12,7 @@
         <b-nav-item><router-link to="/oferta">Oferta</router-link></b-nav-item>
         <b-nav-item><router-link to="/cennik">Cennik</router-link></b-nav-item>
         <b-nav-item><router-link to="/kontakt">Kontakt</router-link></b-nav-item>
+        <b-nav-item><router-link to="/rejestracja2">Test</router-link></b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
@@ -28,7 +29,7 @@
             <em> Administrator </em>
           </template>
           <b-dropdown-item><router-link to="/rejestracja">Zabiegi</router-link></b-dropdown-item>
-          <b-dropdown-item><router-link to="/rejestracja2">Użytkownicy</router-link></b-dropdown-item>
+          <b-dropdown-item><router-link to="/user">Użytkownicy</router-link></b-dropdown-item>
         </b-nav-item-dropdown>
 
       </b-navbar-nav>

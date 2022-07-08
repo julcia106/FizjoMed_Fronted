@@ -7,6 +7,7 @@ import KontaktView from '../views/KontaktView.vue'
 import RejestracjaView from '../views/RejestracjaView.vue'
 import RejestracjaView2 from '../views/RejestracjaView2.vue'
 import OfertaView from '../views/OfertaView.vue'
+import UserView from '../views/UserView.vue'
 
 Vue.use(VueRouter)
 
@@ -40,6 +41,11 @@ const routes = [
     path: '/rejestracja',
     name: 'rejestracja',
     component: RejestracjaView
+  },
+  {
+    path: '/user',
+    name: 'user',
+    component: UserView
   },
   {
     path: '/rejestracja2',
