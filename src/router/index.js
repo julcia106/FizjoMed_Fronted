@@ -5,7 +5,7 @@ import AboutView from '../views/AboutView.vue'
 import CennikView from '../views/CennikView.vue'
 import KontaktView from '../views/KontaktView.vue'
 import RejestracjaView from '../views/RejestracjaView.vue'
-import RejestracjaView2 from '../views/RejestracjaView2.vue'
+import AdminLogin from '../views/AdminLoginView.vue'
 import OfertaView from '../views/OfertaView.vue'
 import UserView from '../views/UserView.vue'
 
@@ -48,9 +48,9 @@ const routes = [
     component: UserView
   },
   {
-    path: '/rejestracja2',
-    name: 'rejestracja2',
-    component: RejestracjaView2
+    path: '/adminlogin',
+    name: 'adminlogin',
+    component: AdminLogin
   }
 ]
 

@@ -11,8 +11,8 @@
         <b-nav-item><router-link to="/about">O nas</router-link></b-nav-item>
         <b-nav-item><router-link to="/oferta">Oferta</router-link></b-nav-item>
         <b-nav-item><router-link to="/cennik">Cennik</router-link></b-nav-item>
+        <b-nav-item><router-link to="/rejestracja">Zabiegi</router-link></b-nav-item>
         <b-nav-item><router-link to="/kontakt">Kontakt</router-link></b-nav-item>
-        <b-nav-item><router-link to="/rejestracja2">Test</router-link></b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
@@ -28,8 +28,10 @@
           <template #button-content>
             <em> Administrator </em>
           </template>
-          <b-dropdown-item><router-link to="/rejestracja">Zabiegi</router-link></b-dropdown-item>
-          <b-dropdown-item><router-link to="/user">Użytkownicy</router-link></b-dropdown-item>
+          <b-dropdown-item v-if="isAdminTest === false"><router-link to="/adminlogin">Logowanie</router-link></b-dropdown-item>
+          <b-dropdown-item v-if="isAdminTest === true"><router-link to="/rejestracja">Zarządzaj zabiegami</router-link></b-dropdown-item>
+          <b-dropdown-item v-if="isAdminTest === true"><router-link to="/user">Użytkownicy</router-link></b-dropdown-item>
+          <b-dropdown-item v-if="isAdminTest === true" @click="logout">Wyloguj</b-dropdown-item>
         </b-nav-item-dropdown>
 
       </b-navbar-nav>
@@ -39,8 +41,24 @@
 </template>
 
 <script>
+import store from '@/store/index.js';
+import router from '../router/index.js'
+
 export default {
-  name: 'Navbar',
+  data(){
+    return{
+      isAdminTest,
+    }
+  },
+  computed: {
+    isAdminTest() {return store.state.isAdmin}
+  },
+  methods: {
+    logout(){
+      store.state.isAdmin = false;
+      router.push({name: 'home'}) 
+    }
+  },
 }
 </script>
 

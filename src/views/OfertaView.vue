@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    <h1 class="font-weight-light pt-5">Nasza oferta</h1>
     <Oferta></Oferta>
     <Footer></Footer>
   </div>

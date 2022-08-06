@@ -6,7 +6,7 @@
         <b-col cols="8">
           <div class="text">
             <h1 class="font-weight-light pb-3">O nas</h1>
-            <p>Fizjomed to starannie dobrana grupa specjalistów z dr n. med. Filipem Piętą na czele.
+            <p>Fizjomed to starannie dobrana grupa specjalistów z dr n. med. Katarzyną Sokół na czele.
               Wszystkich z nas cechuje rozległa wiedza i doświadczenie w zakresie leczenia różnorodnych dolegliwości.
               Tysiące godzin szkoleń, a następnie wspólnej praktyki pozwoliły nam wypracować zgrany zespół i skuteczne
               techniki leczenia.

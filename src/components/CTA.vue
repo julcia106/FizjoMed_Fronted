@@ -19,6 +19,9 @@ export default {
           { Usługa: 'Konsultacja ortopedyczna + USG/USG (podwójne)', Cena: '300 zł/280 zł' },
           { Usługa: 'Neurologopeda wizyta (diagnostyczna)', Cena: '210 – 230 zł' },
           { Usługa: 'USG tarczycy, jamy brzusznej, ortopedyczne', Cena: '150 zł' },
+          { Usługa: 'Fizykoterapia', Cena: '50 zł' },
+          { Usługa: 'Suche igłowanie', Cena: '150 zł' },
+          { Usługa: 'Elektrostymulacja', Cena: '50 zł' },
         ]
       }
   }
