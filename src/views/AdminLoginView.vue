@@ -1,5 +1,5 @@
 <template>
-  <div class="adminlogin">
+  <div class="container">
       <h1>Logowanie Administratora</h1>
       <AdminLogin></AdminLogin>
   </div>
@@ -15,3 +15,9 @@ export default {
 }
 }
 </script>
+
+<style scoped>
+.container {
+  padding-top: 20px;
+}
+</style>

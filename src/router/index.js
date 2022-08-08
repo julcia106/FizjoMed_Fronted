@@ -4,10 +4,12 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import CennikView from '../views/CennikView.vue'
 import KontaktView from '../views/KontaktView.vue'
-import RejestracjaView from '../views/RejestracjaView.vue'
+import TreatmentManagementView from '../views/TreatmentManagementView.vue'
+import RezerwacjaZabieguView from '../views/RezerwacjaZabieguView.vue'
 import AdminLogin from '../views/AdminLoginView.vue'
 import OfertaView from '../views/OfertaView.vue'
 import UserView from '../views/UserView.vue'
+import AdminView from '../views/AdminView.vue'
 
 Vue.use(VueRouter)
 
@@ -38,9 +40,14 @@ const routes = [
     component: KontaktView
   },
   {
-    path: '/rejestracja',
-    name: 'rejestracja',
-    component: RejestracjaView
+    path: '/zabiegi',
+    name: 'zabiegi',
+    component: TreatmentManagementView
+  },
+  {
+    path: '/rezerwacjazabiegu',
+    name: 'rezerwacjazabiegu',
+    component: RezerwacjaZabieguView
   },
   {
     path: '/user',
@@ -51,6 +58,11 @@ const routes = [
     path: '/adminlogin',
     name: 'adminlogin',
     component: AdminLogin
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: AdminView
   }
 ]
 

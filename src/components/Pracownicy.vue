@@ -73,7 +73,7 @@ export default {
 
 <style scoped>
 .container {
-  padding-top: 3%;
+  padding-top: 2%;
 }
 
 .text {

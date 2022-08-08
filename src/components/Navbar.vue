@@ -1,18 +1,19 @@
 <template>
 <div>
   <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand href="#">Fizjoterapia</b-navbar-brand>
+    <b-navbar-brand v-if="isAdminTest === false" href="#">Fizjoterapia</b-navbar-brand>
+    <b-navbar-brand v-if="isAdminTest === true" href="#">Panel Administratora</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item ><router-link to="/">Start</router-link></b-nav-item>
-        <b-nav-item><router-link to="/about">O nas</router-link></b-nav-item>
-        <b-nav-item><router-link to="/oferta">Oferta</router-link></b-nav-item>
-        <b-nav-item><router-link to="/cennik">Cennik</router-link></b-nav-item>
-        <b-nav-item><router-link to="/rejestracja">Zabiegi</router-link></b-nav-item>
-        <b-nav-item><router-link to="/kontakt">Kontakt</router-link></b-nav-item>
+        <b-nav-item v-if="isAdminTest === false"><router-link to="/">Start</router-link></b-nav-item>
+        <b-nav-item v-if="isAdminTest === false"><router-link to="/about">O nas</router-link></b-nav-item>
+        <b-nav-item v-if="isAdminTest === false"><router-link to="/oferta">Oferta</router-link></b-nav-item>
+        <b-nav-item v-if="isAdminTest === false"><router-link to="/cennik">Cennik</router-link></b-nav-item>
+        <b-nav-item v-if="isAdminTest === false"><router-link to="/rezerwacjazabiegu">Rezerwacja</router-link></b-nav-item>
+        <b-nav-item v-if="isAdminTest === false"><router-link to="/kontakt">Kontakt</router-link></b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
@@ -29,7 +30,8 @@
             <em> Administrator </em>
           </template>
           <b-dropdown-item v-if="isAdminTest === false"><router-link to="/adminlogin">Logowanie</router-link></b-dropdown-item>
-          <b-dropdown-item v-if="isAdminTest === true"><router-link to="/rejestracja">Zarządzaj zabiegami</router-link></b-dropdown-item>
+          <b-dropdown-item v-if="isAdminTest === true"><router-link to="/admin">Kalendarz</router-link></b-dropdown-item>
+          <b-dropdown-item v-if="isAdminTest === true"><router-link to="/zabiegi">Zarządzaj zabiegami</router-link></b-dropdown-item>
           <b-dropdown-item v-if="isAdminTest === true"><router-link to="/user">Użytkownicy</router-link></b-dropdown-item>
           <b-dropdown-item v-if="isAdminTest === true" @click="logout">Wyloguj</b-dropdown-item>
         </b-nav-item-dropdown>

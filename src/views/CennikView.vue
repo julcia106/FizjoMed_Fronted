@@ -1,19 +1,19 @@
 <template>
   <div class="cennik">
       <h1>Cennik</h1>
-      <CTA></CTA>
+      <Cennik></Cennik>
       <Footer></Footer>
   </div>
 </template>
 
 <script>
-import CTA from '@/components/CTA.vue'
+import Cennik from '@/components/Cennik.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'CennikView',
   components: {
-    CTA,
+    Cennik,
     Footer
 }
 }

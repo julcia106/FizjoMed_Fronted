@@ -30,9 +30,9 @@
           kompleksową opiekę i
           wsparcie dla rodzin i dzieci mających trudności w przyjmowaniu pokarmów.</p>
 
-        <b-button variant="primary">
+        <b-button variant="info">
           <router-link style="text-decoration: none;
-          color: inherit" to="/rejestracja">Zarejestruj się
+          color: inherit" to="/rezerwacjazabiegu">Zarezerwuj termin
           </router-link>
         </b-button>
       </b-col>

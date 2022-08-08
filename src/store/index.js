@@ -13,13 +13,19 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    getAdminInfo: (state) => {
+    isAdmin: (state) => {
       return state.isAdmin;
     }
   },
   mutations: {
+    isAdmin(state, isAdmin){
+      state.isAdmin = isAdmin;
+    }
   },
   actions: {
+    isAdmin(context, isAdmin){
+      context.commit('isAdmin', isAdmin);
+    }
   },
   modules: {
   }
