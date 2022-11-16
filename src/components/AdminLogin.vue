@@ -73,7 +73,6 @@ import error from './Error.vue'
               store.state.isAdmin = true;
               //this.isAdminTest = true;
               router.push({name: 'admin'}) 
-              debugger;
             }
             else if(isAdmin === false)
             {
