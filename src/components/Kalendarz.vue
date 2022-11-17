@@ -24,12 +24,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-if="value == res.startDate" v-for="res in reservations">
+        <tr v-if="value == res.startDate && res.TreatmentName != 'puste'" v-for="res in reservations">
           <td>{{ res.startTime }} - {{ res.endTime }}</td>
           <td>{{ res.TreatmentName }}</td>
-          <td>{{ res.FirstName }} {{ res.LastName }}</td>
-          <td>{{ res.EmailAdress }}</td>
-          <td>{{ res.PhoneNumber }}</td>
+          <td>{{ res.client_Name }} {{ res.client_Surname }}</td>
+          <td>{{ res.client_Email }}</td>
+          <td>{{ res.client_Phone }}</td>
         </tr>
       </tbody>
     </table>

@@ -35,17 +35,38 @@
 
         <b-col class="my-4 mx-4">
           <b-row class="pt-5"></b-row>
-          <b-row class="pt-3">
-          </b-row>
-          <b-row class="pt-3">
+
+          <!-- <b-row class="pt-3">
             <b-form-group label="Wybierz pracownika:" label-for="workerSelector" description="" class="mr-4">
               <b-form-select id="workerSelector" v-model="selectedWorker" :options="worker"></b-form-select>
+            </b-form-group>
+          </b-row> -->
+          <b-row>
+            <div style="color: #17a2b8;">
+              <h5>Podaj proszę dane kontaktowe: </h5>
+            </div>
+            <b-form-group class="pr-2">
+              <b-form-input v-model="client_Email" type="email" placeholder="Twój Email:" required></b-form-input>
+            </b-form-group>
+            <b-form-group>
+              <b-form-input v-model="client_Phone" placeholder="Twój numer telefonu:" required></b-form-input>
+            </b-form-group>
+          </b-row>
+          <b-row>
+            <b-form-group class="pr-2">
+              <b-form-input v-model="client_Name" placeholder="Imię" required></b-form-input>
+            </b-form-group>
+
+            <b-form-group>
+              <b-form-input v-model="client_Surname" placeholder="Nazwisko" required></b-form-input>
             </b-form-group>
           </b-row>
           <b-row>
             <div>
 
-              <p>Wybierz godzinę: </p>
+              <div style="color: #17a2b8;">
+                <h5>Wybierz godzinę: </h5>
+              </div>
 
             </div>
           </b-row>
@@ -70,7 +91,7 @@
               </template>
 
             </b-table>
-            <p>{{ treatmentName }}, dnia: <b>{{ dates.pickedDay }}</b> o godzinie: <b>{{treatmentStartTime}}</b></p>
+            <p>{{ treatmentName }}, dnia: <b>{{ dates.pickedDay }}</b> o godzinie: <b>{{ treatmentStartTime }}</b></p>
           </div>
         </b-col>
         <b-button class="mx-3" block variant="info" @click="createReservation(), hideModal(), showConfirmBox()">
@@ -98,6 +119,10 @@ export default {
 
     return {
       today: '',
+      client_Email: '',
+      client_Name: '',
+      client_Surname: '',
+      client_Phone: '',
       dates,
       selectedWorker: null,
       criteria: dates,
@@ -161,7 +186,10 @@ export default {
     createReservation() {
       axios.put("http://localhost:5868/api/Treatment/createReservation", {
         treatment_id: this.treatmentId,
-        client_id: this.client_id,
+        client_Name: this.client_Name,
+        client_Surname: this.client_Surname,
+        client_Phone: this.client_Phone,
+        client_Email: this.client_Email,
         worker_id: this.worker_id,
         reservation_id: this.reservation_id
       })
@@ -192,14 +220,14 @@ export default {
     onRowSelected(items) {
       this.selected = items,
 
-      this.client_id = 1,
-      this.worker_id = 2,
-      this.reservation_id = this.selected[0].reservation_id,
-      this.treatmentStartTime = this.selected[0].startTime
+        this.client_id = 1,
+        this.worker_id = 2,
+        this.reservation_id = this.selected[0].reservation_id,
+        this.treatmentStartTime = this.selected[0].startTime
     },
     passTreatmentIdAndName(treatmentId, treatmentName) {
       this.treatmentId = treatmentId,
-      this.treatmentName = treatmentName
+        this.treatmentName = treatmentName
     },
     selectFirstRow() {
       console.log('123');
@@ -221,7 +249,7 @@ export default {
       })
         .then(value => {
           this.boxTwo = value
-          window.location.reload(); 
+          window.location.reload();
         })
         .catch(err => {
           // An error occurred
@@ -229,8 +257,8 @@ export default {
     },
     showConfirmBox() {
       this.confirmBox = ''
-      const messageVNode= 'Potwierdź proszę czy poniższe dane są poprawne: ' + this.treatmentName + ' dnia ' +  this.dates.pickedDay + ' o godzinie ' + this.treatmentStartTime
-      this.$bvModal.msgBoxConfirm( [messageVNode], {
+      const messageVNode = 'Potwierdź proszę czy poniższe dane są poprawne: ' + 'Imie i nazwisko: ' + this.client_Name + ' '+ this.client_Surname + ' ' + 'numer telefonu: ' + this.client_Phone + ' ' + 'adres email: ' + this.client_Email + ' ' + this.treatmentName + ' dnia ' + this.dates.pickedDay + ' o godzinie ' + this.treatmentStartTime
+      this.$bvModal.msgBoxConfirm([messageVNode], {
         title: 'Potwierdzenie',
         size: 'sm',
         buttonSize: 'sm',
