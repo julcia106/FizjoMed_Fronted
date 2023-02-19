@@ -33,8 +33,8 @@
           </b-calendar>
         </b-col>
 
-        <b-col class="my-4 mx-4">
-          <b-row class="pt-5"></b-row>
+        <b-col class="mx-4">
+          <b-row class="pt-3"></b-row>
 
           <!-- <b-row class="pt-3">
             <b-form-group label="Wybierz pracownika:" label-for="workerSelector" description="" class="mr-4">
@@ -98,10 +98,6 @@
           Rezerwuj
         </b-button>
       </b-row>
-      <p>
-        Selected Rows:<br>
-        {{ selected }}
-      </p>
     </b-modal>
   </div>
 </template>
@@ -184,7 +180,7 @@ export default {
         });
     },
     createReservation() {
-      axios.put("http://localhost:5868/api/Treatment/createReservation", {
+      axios.put("http://localhost:5868/api/Reservation", {
         treatment_id: this.treatmentId,
         client_Name: this.client_Name,
         client_Surname: this.client_Surname,
@@ -198,7 +194,7 @@ export default {
         });
     },
     getAvailableReservations() {
-      axios.get('http://localhost:5868/api/Treatment/getAvailableReservations')
+      axios.get('http://localhost:5868/api/Reservation/getAvailableReservations')
         .then((response) => {
           this.items_modal = response.data;
         })
@@ -290,5 +286,7 @@ export default {
 <style scoped>
 .container {
   display: inline-block;
+  padding-top: 2%;
+  padding-bottom: 7%;
 }
 </style>

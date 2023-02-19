@@ -19,7 +19,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr v-for="treatment in treatments">
+    <tr v-if="treatment.TreatmentName != 'puste'" v-for="treatment in treatments">
       <td>{{ treatment.TreatmentName }}</td>
       <td>{{ treatment.treatment_description }}</td>
       <td>{{ treatment.treatment_price }} zł</td>
@@ -61,5 +61,6 @@ export default {
 <style scoped>
 .container {
   display: inline-block;
+  padding-top:2%;
 }
 </style>

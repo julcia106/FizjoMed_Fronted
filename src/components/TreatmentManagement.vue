@@ -83,7 +83,7 @@
       </thead>
 
       <tbody>
-        <tr v-for="dep in treatments">
+        <tr v-if="dep.TreatmentName != 'puste'"  v-for="dep in treatments">
           <td>{{ dep.TreatmentId }}</td>
           <td>{{ dep.TreatmentName }}</td>
           <td>

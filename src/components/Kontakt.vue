@@ -1,5 +1,5 @@
 <template>
-<div class="pt-5">
+<div class="pt-5 pb-5">
   <b-card
     overlay
     img-src="https://picsum.photos/900/250/?image=3"
