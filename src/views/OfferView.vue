@@ -1,18 +1,19 @@
 <template>
   <div class="about">
-    <Pracownicy></Pracownicy>
+    <h1 class="font-weight-light pt-5">Nasza oferta</h1>
+    <Offer></Offer>
     <Footer></Footer>
   </div>
 </template>
 
 <script>
-import Pracownicy from '@/components/Pracownicy.vue'
+import Offer from '@/components/Offer.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
-  name: 'AboutView',
+  name: 'OfferView',
   components: {
-    Pracownicy,
+    Offer,
     Footer
 }
 }

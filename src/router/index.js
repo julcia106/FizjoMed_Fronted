@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
-import CennikView from '../views/CennikView.vue'
-import KontaktView from '../views/KontaktView.vue'
+import AboutWorkersView from '../views/AboutWorkersView.vue'
+import PriceListView from '../views/PriceListView.vue'
+import ContactView from '../views/ContactView.vue'
 import TreatmentManagementView from '../views/TreatmentManagementView.vue'
-import RezerwacjaZabieguView from '../views/RezerwacjaZabieguView.vue'
+import TreatmentBookingView from '../views/TreatmentBookingView.vue'
 import AdminLogin from '../views/AdminLoginView.vue'
-import OfertaView from '../views/OfertaView.vue'
+import OfferView from '../views/OfferView.vue'
 import UserView from '../views/UserView.vue'
 import AdminView from '../views/AdminView.vue'
 
@@ -22,22 +22,22 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    component: AboutView
+    component: AboutWorkersView
   },
   {
     path: '/cennik',
     name: 'cennik',
-    component: CennikView
+    component: PriceListView
   },
   {
     path: '/oferta',
     name: 'oferta',
-    component: OfertaView
+    component: OfferView
   },
   {
     path: '/kontakt',
     name: 'konakt',
-    component: KontaktView
+    component: ContactView
   },
   {
     path: '/zabiegi',
@@ -47,7 +47,7 @@ const routes = [
   {
     path: '/rezerwacjazabiegu',
     name: 'rezerwacjazabiegu',
-    component: RezerwacjaZabieguView
+    component: TreatmentBookingView
   },
   {
     path: '/user',

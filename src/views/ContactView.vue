@@ -1,19 +1,19 @@
 <template>
-  <div class="kontakt">
-    <Kontakt></Kontakt>
+  <div class="contact">
+    <Contact></Contact>
     <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Footer from '@/components/Footer.vue'
-import Kontakt from '@/components/Kontakt.vue'
+import Contact from '@/components/Contact.vue'
 
 export default {
-  name: 'KontaktView',
+  name: 'ContactView',
   components: {
     Footer,
-    Kontakt,
+    Contact,
   }
 }
 </script>

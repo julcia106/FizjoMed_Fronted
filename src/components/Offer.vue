@@ -90,7 +90,7 @@ Powrót do formy po porodzie<br>
 
 <script>
 export default {
-  name: 'Oferta',
+  name: 'Offer',
 }
 </script>
 

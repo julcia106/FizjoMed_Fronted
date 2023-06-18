@@ -1,19 +1,19 @@
 <template>
   <div class="rejestracja">
       <h1 class="mt-5">Rezerwacja zabiegu</h1>
-      <RezerwacjaZabiegu></RezerwacjaZabiegu>
+      <TreatmentBooking></TreatmentBooking>
       <Footer></Footer>
   </div>
 </template>
 
 <script>
-import RezerwacjaZabiegu from '@/components/RezerwacjaZabiegu.vue'
+import TreatmentBooking from '@/components/TreatmentBooking.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
-  name: 'RezerwacjaZabieguView',
+  name: 'TreatmentBookingView',
   components: {
-    RezerwacjaZabiegu,
+    TreatmentBooking,
     Footer,
 }
 }

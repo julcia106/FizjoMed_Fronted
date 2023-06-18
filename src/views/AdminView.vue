@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <Kalendarz></Kalendarz>
+    <Calendar></Calendar>
   </div>
 </template>
 
 <script>
-import Kalendarz from '@/components/Kalendarz.vue'
+import Calendar from '@/components/Calendar.vue'
 
 export default {
   name: 'AdminView',
   components: {
-    Kalendarz,
+    Calendar,
 }
 }
 </script>

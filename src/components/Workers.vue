@@ -67,7 +67,7 @@
 
 <script>
 export default {
-  name: 'Pracownicy',
+  name: 'Workers',
 }
 </script>
 

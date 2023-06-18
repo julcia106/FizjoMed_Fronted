@@ -35,12 +35,6 @@
 
         <b-col class="mx-4">
           <b-row class="pt-3"></b-row>
-
-          <!-- <b-row class="pt-3">
-            <b-form-group label="Wybierz pracownika:" label-for="workerSelector" description="" class="mr-4">
-              <b-form-select id="workerSelector" v-model="selectedWorker" :options="worker"></b-form-select>
-            </b-form-group>
-          </b-row> -->
           <b-row>
             <div style="color: #17a2b8;">
               <h5>Podaj proszę dane kontaktowe: </h5>
